@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Email Summarizer</title>
+</head>
+
+<body>
+
+    <h1>Email Summarizer</h1>
+
+    <p>Paste your email below:</p>
+
+    <textarea id="email" rows="10" cols="60"></textarea>
+
+    <br><br>
+
+    <button onclick="summarize()">
+        Summarize
+    </button>
+
+    <h2>Summary</h2>
+
+    <p id="result"></p>
+
+    <script>
+
+        function summarize() {
+
+            const email =
+                document.getElementById("email").value;
+
+            const summary =
+                email.substring(0, 150);
+
+            document.getElementById("result")
+                .innerText =
+                summary + "...";
+
+        }
+
+    </script>
+
+</body>
+
+</html>
+
